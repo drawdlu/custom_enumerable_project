@@ -8,4 +8,11 @@ end
 # to this method
 class Array
   # Define my_each here
+  def my_each
+    last_index = self.length - 1
+    for index in 0..last_index do
+      yield(self[index])
+    end
+    return self
+  end
 end
